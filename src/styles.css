@@ -2,3 +2,216 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Angular CSS */
+*[_ngcontent-ng-c2322032080] {
+    padding: 0px 5px;
+}
+/* Header */
+.navbar {
+    background-color: #faf9fd;
+}
+/* Dropdown Button */
+.navbar-toggler-icon {
+    background-image: var(--bs-navbar-toggler-icon-bg);
+}
+
+.navbar-toggler {
+    background-color: #3aa5fd;
+}
+.dropbtn {
+    background-color: transparent;
+    color: dark;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #cfe2ff;
+    border-radius: 15px;
+    font-size: 17px;
+}
+.btn {
+    background-color: rgb(58, 165, 253);
+ }
+ .card {
+     height: 477.6px;
+ }
+ 
+ .card-img-top {
+     height: 304.4px;
+ }
+ .button {
+   display: flex;
+ }
+ 
+ .box {
+   width: 35px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 15px;
+   font-weight: 700;
+   color: #fff;
+   transition: all .8s;
+   cursor: pointer;
+   position: relative;
+   background: rgb(58, 165, 253);
+   overflow: hidden;
+ }
+ 
+ .box:before {
+   content: "N";
+   position: absolute;
+   top: 0;
+   background: #0f0f0f;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transform: translateY(100%);
+   transition: transform .4s;
+ }
+ 
+ .box:nth-child(2)::before {
+   transform: translateY(-100%);
+   content: 'B';
+ }
+ 
+ .box:nth-child(3)::before {
+   content: 'H';
+ }
+ 
+ .box:nth-child(4)::before {
+   transform: translateY(-100%);
+   content: 'K';
+ }
+ 
+ 
+ .button:hover .box:before {
+   transform: translateY(0);
+ }
+ 
+         a {
+             text-decoration: none;
+         }
+         *{
+             padding: 0;
+             margin: auto;
+             border: none;
+         }
+ 
+         body{
+             font-family: Arial, Helvetica, sans-serif;
+         }
+ 
+         .navbar-brand {
+             font-size: 40px;
+         }
+ 
+         .nav-link {
+             color: black;
+             font-size: 15px;
+         }
+         .nav-link:hover {
+             background-color: #cfe2ff;
+             border-radius: 15px;
+             padding: 16px;
+             font-size: 16px;
+         }
+       /* Container styles */
+       .scrolling-text-container {
+           background-color: #929fba;
+           overflow: hidden;
+           border:solid #929fba;
+           border-left: none;
+           border-right: none;
+       }
+   
+       /* Inner container styles */
+       .scrolling-text-inner {
+           display: flex;
+           white-space: nowrap;
+           font-size: 16px;
+           font-weight: 600;
+           padding: 8px 0;
+       }
+   
+       /* Text styles */
+       .scrolling-text {
+           display: flex;
+       }
+   
+       .scrolling-text-item {
+         font-size: 12px;  
+         padding: 0 30px;
+         color: white
+       }
+   
+       /* Apply the animation to the text items */
+       .scrolling-text-inner > div {
+           animation: var(--direction) var(--marquee-speed) linear infinite;
+       }
+   
+       /* Pause the animation when a user hovers over it */
+       /* .scrolling-text-container:hover .scrolling-text-inner > div {
+           animation-play-state: paused;
+       } */
+   
+       /* Setting the Animation using Keyframes */
+       @keyframes scroll-left {
+           0% {
+               transform: translateX(0%);
+           }
+           100% {
+               transform: translateX(-100%);
+           }
+       }
+   
+       @keyframes scroll-right {
+           0% {
+               transform: translateX(-100%);
+           }
+           100% {
+               transform: translateX(0%);
+           }
+       }
+    

@@ -10,6 +10,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
     ProductComponent,
     LoginComponent,
     RegisterComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
