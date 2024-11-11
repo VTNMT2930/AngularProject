@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div class="container-fluid p-0">
     <nav class="header navbar navbar-expand-lg">
         <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" routerLink = "TrangChu">
             <div class="button">
                 <div class="box">S</div>
                 <div class="box">H</div>
@@ -15,32 +15,32 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link left" aria-current="page" href="#">Trang Chủ </a>
+                  <a class="nav-link left" aria-current="page" routerLink = "TrangChu">Trang Chủ </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link left" aria-current="page" href="#">Giới Thiệu </a>
+                  <a class="nav-link left" aria-current="page" routerLink = "GioiThieu">Giới Thiệu </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link left" aria-current="page" href="#">Sản Phẩm </a>
+                    <a class="nav-link left" aria-current="page" routerLink = "SanPham">Sản Phẩm </a>
                 </li>
                 <li class="dropdown">
                   <button class="dropbtn">Phân Loại <i class="fa fa-caret-down"></i></button>
                   <div class="dropdown-content">
-                      <a href="#">Link 1</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a>
+                      <a href="#">Áo thun</a>
+                      <a href="#">Áo khoác</a>
+                      <a href="#">Váy</a>
                   </div>
               </li>
             </ul>
             <ul class="nav justify-content-end" >
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#"><i class="bi bi-search"></i></a>
+                  <a class="nav-link" aria-current="page" href=""><i class="bi bi-search"></i></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="bi bi-person"></i></a>
+                  <a class="nav-link" routerLink = "DangNhap"><i class="bi bi-person"></i></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="bi bi-bag"></i></a>
+                  <a class="nav-link" routerLink = "GioHang"><i class="bi bi-bag"></i></a>
                 </li>
               </ul>
         </div>

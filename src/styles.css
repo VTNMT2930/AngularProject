@@ -70,6 +70,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .btn {
     background-color: #E981A4;
  }
+ .btn:hover {
+    background-color: #f1c9d6;
+ }
  .card {
      height: 477.6px;
  }
