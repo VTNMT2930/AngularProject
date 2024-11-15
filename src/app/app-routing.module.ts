@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'DangNhap' , component: LoginComponent},
   {path: 'DangKy' , component: RegisterComponent},
   {path: 'GioHang' , component: ShoppingCartComponent},
-  {path: '', component: HomeComponent }
+  
   
 
 ];
