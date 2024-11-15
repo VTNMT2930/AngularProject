@@ -13,7 +13,8 @@ const routes: Routes = [
   {path: 'SanPham' , component: ProductComponent},
   {path: 'DangNhap' , component: LoginComponent},
   {path: 'DangKy' , component: RegisterComponent},
-  {path: 'GioHang' , component: RegisterComponent}
+  {path: 'GioHang' , component: RegisterComponent},
+  {path: '' , component: HomeComponent}
   
 
 ];
