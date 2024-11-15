@@ -6,6 +6,7 @@ import { IntroduceComponent } from './components/introduce/introduce.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductComponent } from './components/product/product.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 
 const routes: Routes = [
   {path: 'TrangChu' , component: HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'SanPham' , component: ProductComponent},
   {path: 'DangNhap' , component: LoginComponent},
   {path: 'DangKy' , component: RegisterComponent},
-  {path: 'GioHang' , component: RegisterComponent}
+  {path: 'GioHang' , component: ShoppingCartComponent},
+  {path: '', component: HomeComponent }
   
 
 ];
