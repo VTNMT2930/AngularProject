@@ -4,6 +4,7 @@ import path from 'node:path';
 import { HomeComponent } from './components/home/home.component';
 import { IntroduceComponent } from './components/introduce/introduce.component';
 import { LoginComponent } from './components/login/login.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductComponent } from './components/product/product.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
