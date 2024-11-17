@@ -188,12 +188,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
          padding: 0 30px;
          color: white
        }
-   
        /* Apply the animation to the text items */
        .scrolling-text-inner > div {
            animation: var(--direction) var(--marquee-speed) linear infinite;
        }
-   
        /* Pause the animation when a user hovers over it */
        /* .scrolling-text-container:hover .scrolling-text-inner > div {
            animation-play-state: paused;
@@ -217,4 +215,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
                transform: translateX(0%);
            }
        }
+
+
     
