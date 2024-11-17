@@ -190,12 +190,10 @@ body { margin: 0; font-family: Pangea,sans-serif; background-color: #ECD4EA; }
          padding: 0 30px;
          color: white
        }
-   
        /* Apply the animation to the text items */
        .scrolling-text-inner > div {
            animation: var(--direction) var(--marquee-speed) linear infinite;
        }
-   
        /* Pause the animation when a user hovers over it */
        /* .scrolling-text-container:hover .scrolling-text-inner > div {
            animation-play-state: paused;
@@ -219,4 +217,6 @@ body { margin: 0; font-family: Pangea,sans-serif; background-color: #ECD4EA; }
                transform: translateX(0%);
            }
        }
+
+
     
