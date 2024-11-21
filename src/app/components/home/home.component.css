@@ -1,3 +1,6 @@
-.carousel-indicators {
-    
+.card-img-top:hover{
+    transform: translateY(-10px);
+}
+.card-img-top {
+  transition: 0.7s all ease;
 }

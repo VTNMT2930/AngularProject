@@ -18,7 +18,6 @@ const routes: Routes = [
   {path: 'DangKy' , component: RegisterComponent},
   {path: 'GioHang' , component: ShoppingCartComponent},
   {path: 'GioHang' , component: RegisterComponent},
-  {path: '' , component: HomeComponent}
 
   
 
