@@ -20,6 +20,7 @@ const routes: Routes = [
   {path: 'DangNhap' , component: LoginComponent},
   {path: 'DangKy' , component: RegisterComponent},
   {path: 'GioHang' , component: ShoppingCartComponent},
+  {path: 'GioHang' , component: RegisterComponent},
   {path: 'T-shirt' , component: TShirtComponent},
   {path: 'Jacket' , component: JacketComponent},
   {path: 'Dress' , component: DressComponent}

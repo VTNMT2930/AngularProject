@@ -1,0 +1,40 @@
+.pagination{
+  margin-left: 500px;
+}
+.card-img-top:hover{
+    transform: translateY(-10px);
+}
+.card-img-top {
+  transition: 0.7s all ease;
+}
+.pagination {
+    display: inline-block;
+    font-weight: 600;
+    font-family: MTD Balerno !important;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+  }
+  
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+  
+  .pagination a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .pagination a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
