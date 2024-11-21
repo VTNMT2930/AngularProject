@@ -1,0 +1,115 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="assets/image/banner-1.png" class="d-block w-100" alt="..." style="height: 500px;">
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="assets/image/banner-2.png" class="d-block w-100" alt="..." style="height: 500px;">
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="assets/image/banner-3.png" class="d-block w-100" alt="..." style="height: 500px;">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+  <br>
+<nav aria-label="breadcrumb" style="display: flex; margin-right: 100px;margin-right: 1250px;"  >
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a class="h5" href="#">Trang Chủ</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Giỏ Hàng</li>
+    </ol>
+</nav>
+
+<!-- Cart Main Area Start -->
+<div class="cart-main-area ptb-100 ptb-sm-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <!-- Form Start -->
+                <form action="#">
+                    <div class="table-content table-responsive mb-45">
+                        <!-- Table Content Start -->
+                            <h4>Chưa có sản phẩm nào trong giỏ hàng</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="product-thumbnail">Ảnh</th>
+                                        <th class="product-name">Sản phẩm</th>
+                                        <th class="product-size">Kích cỡ</th>
+                                        <th class="product-price">Giá</th>
+                                        <th class="product-quantity">Số lượng</th>
+                                        <th class="product-subtotal">Tổng</th>
+                                        <th class="product-remove">Xóa</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <tr id="row-order-@item.IDCTSP">
+                                            <td class="product-thumbnail">
+                                                <a href=""><img alt="cart-image" /></a>
+                                            </td>
+                                            <td class="product-name"><a href=""></a></td>
+                                            <td class="product-size"><b></b></td>
+                                            <td class="product-price"><span class="amount"></span></td>
+                                            <td class="product-quantity">
+                                                <input readonly type="number" value="@item.ChiTietHoaDons.First().SoLuongMua" />
+                                            </td>
+                                            <td class="product-total"><span class="amount"></span></td>
+                                            <td class="product-remove"> <a style="cursor: pointer"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                    <!-- Table Content Start -->
+                    <div class="row" style="margin-top: 30px; margin-bottom: 30px;">
+                        <!-- Cart Button Start -->
+                        <div class="col-md-8 col-sm-12">
+                            <div class="buttons-cart">
+                                <a href="">Cập nhật giỏ hàng</a>
+                                <a href="">Tiếp tục mua sắm</a>
+                            </div>
+                        </div>
+                        <!-- Cart Button Start -->
+                        <!-- Cart Totals Start -->
+                        <div class="col-md-4 col-sm-12">
+                            <div class="cart_totals float-md-right text-md-right">
+                                <h2>Thành tiền</h2>
+                                <br />
+                                <table class="float-md-right">
+                                    <tbody>
+
+                                        <tr class="order-total">
+                                            <th>Tổng</th>
+                                            <td>
+                                                <strong><span class="amount" id="order-total"></span></strong>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="wc-proceed-to-checkout">
+                                    <a href="#" >Đặt hàng</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cart Totals End -->
+                    </div>
+                    <!-- Row End -->
+                </form>
+                <!-- Form End -->
+            </div>
+        </div>
+        <!-- Row End -->
+    </div>
+</div>
+<!-- Cart Main Area End -->

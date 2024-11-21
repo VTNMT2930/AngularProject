@@ -24,6 +24,7 @@ const routes: Routes = [
   {path: 'Jacket' , component: JacketComponent},
   {path: 'Dress' , component: DressComponent}
 
+
   
 
 ];
