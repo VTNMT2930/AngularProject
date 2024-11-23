@@ -15,6 +15,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TShirtComponent } from './components/t-shirt/t-shirt.component';
 import { JacketComponent } from './components/jacket/jacket.component';
 import { DressComponent } from './components/dress/dress.component';
+import { DetailProductComponent } from './components/detail-product/detail-product.component';
+import { Detail1ProductComponent } from './components/detail1-product/detail1-product.component';
+import { Detail2ProductComponent } from './components/detail2-product/detail2-product.component';
+import { Detail3ProductComponent } from './components/detail3-product/detail3-product.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { DressComponent } from './components/dress/dress.component';
     FooterComponent,
     TShirtComponent,
     JacketComponent,
-    DressComponent
+    DressComponent,
+    DetailProductComponent,
+    Detail1ProductComponent,
+    Detail2ProductComponent,
+    Detail3ProductComponent
   ],
   imports: [
     BrowserModule,

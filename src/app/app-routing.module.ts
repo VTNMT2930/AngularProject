@@ -11,6 +11,10 @@ import { ProductComponent } from './components/product/product.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { TShirtComponent } from './components/t-shirt/t-shirt.component';
+import { DetailProductComponent } from './components/detail-product/detail-product.component';
+import { Detail1ProductComponent } from './components/detail1-product/detail1-product.component';
+import { Detail2ProductComponent } from './components/detail2-product/detail2-product.component';
+import { Detail3ProductComponent } from './components/detail3-product/detail3-product.component';
 
 const routes: Routes = [
   {path: '', component : HomeComponent},
@@ -23,7 +27,11 @@ const routes: Routes = [
   {path: 'GioHang' , component: RegisterComponent},
   {path: 'T-shirt' , component: TShirtComponent},
   {path: 'Jacket' , component: JacketComponent},
-  {path: 'Dress' , component: DressComponent}
+  {path: 'Dress' , component: DressComponent},
+  {path: 'Detail', component:DetailProductComponent},
+  {path: 'Detail1', component:Detail1ProductComponent},
+  {path: 'Detail2', component:Detail2ProductComponent},
+  {path: 'Detail3', component:Detail3ProductComponent}
 
 
   
