@@ -1,38 +1,58 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor() {}
-  isSignUp = false;
+  isSignUpActive = false;
 
-  ngOnInit(): void {
-    const signUpButton = document.getElementById('signUp');
-    const signInButton = document.getElementById('signIn');
-    const container = document.getElementById('container');
+  signUpUser = {
+    username: '',
+    email: '',
+    password: ''
+  };
 
-    if (signUpButton && signInButton && container) {
-      signUpButton.addEventListener('click', () => {
-        container.classList.add('right-panel-active');
-      });
+  signInUser = {
+    username: '',
+    password: ''
+  };
 
-      signInButton.addEventListener('click', () => {
-        container.classList.remove('right-panel-active');
-      });
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
-    }
+  togglePanel(isSignUp: boolean) {
+    this.isSignUpActive = isSignUp;
   }
-  togglePanel(isSignUp: boolean): void {
-    const container = document.getElementById('container');
-    if (container) {
-      if (isSignUp) {
-        container.classList.add('right-panel-active');
-      } else {
-        container.classList.remove('right-panel-active');
+
+  onSignUp() {
+    this.authService.register(this.signUpUser).subscribe({
+      next: (response) => {
+        console.log('Đăng ký thành công', response);
+        this.router.navigate(['/']);
+      },
+      error: (err) => {
+        console.error('Lỗi đăng ký', err);
+        // Xử lý lỗi đăng ký
       }
-    }
+    });
+  }
+
+  onSignIn() {
+    this.authService.login(this.signInUser).subscribe({
+      next: (response) => {
+        localStorage.setItem('token', response.token);
+        this.router.navigate(['/']);
+      },
+      error: (err) => {
+        console.error('Lỗi đăng nhập', err);
+        // Xử lý lỗi đăng nhập
+      }
+    });
   }
 }

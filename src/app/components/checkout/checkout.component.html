@@ -1,0 +1,84 @@
+<div class="checkout-area pb-100 pt-15 pb-sm-60" style="margin-top: 50px; margin-bottom: 50px;">
+    <div class="container">
+        <div class="row">
+            <form class="col-lg-6 col-md-6" id="add-bill-form" onsubmit="return datHang()">
+                <div class="checkbox-form mb-sm-40">
+                    <h3>Thông tin nhận hàng</h3>
+                    <input type="hidden" name="matk" />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkout-form-list mb-30">
+                                <label>Họ tên</label>
+                                <input type="text" required placeholder="Họ tên người nhận" name="hotennguoinhan"/>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="checkout-form-list mb-30">
+                                <label>Số điện thoại</label>
+                                <input type="text" required placeholder="Số điện thoại người nhận" name="sodienthoainhan" />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="checkout-form-list mb-30">
+                                <label>Địa chỉ</label>
+                                <input type="text" name="diachinhan" required placeholder="Địa chỉ người nhận"/>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="different-address">
+                        <div class="order-notes">
+                            <div class="checkout-form-list">
+                                <label>Ghi chú</label>
+                                <textarea id="checkout-mess" cols="30" name="ghichu" rows="10" placeholder="Ghi chú cho đơn hàng của bạn"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            <div class="col-lg-6 col-md-6">
+                <div class="your-order">
+                    <h3>Đơn hàng của bạn</h3>
+                    <div class="your-order-table table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="product-name">Sản phẩm</th>
+
+                                    <th class="product-total">Thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr class="cart_item" *ngFor="let product of cartItems">
+                                        <td class="product-name">
+                                            <span class="product-quantity">{{product.name}}</span>
+                                        </td>
+                                        <td class="product-total">
+                                            <span class="amount">{{product.price * product.quantity | currencyPipe}}</span>
+                                        </td>
+                                    </tr>
+                            </tbody>
+                            <tfoot>
+
+                                <tr class="order-total">
+                                    <th>Tổng đơn hàng</th>
+                                    <td>
+                                        <span class=" total amount">{{totalPrice | currencyPipe}}</span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <p id="add-message"></p>
+        <div class="float-md-right">
+            <input type="submit" value="Đặt hàng" form="add-bill-form" class="wc-proceed-to-checkout">
+        </div>
+    </div>
+</div>

@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 import { DressComponent } from './components/dress/dress.component';
-
 import { HomeComponent } from './components/home/home.component';
 import { IntroduceComponent } from './components/introduce/introduce.component';
 import { JacketComponent } from './components/jacket/jacket.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductComponent } from './components/product/product.component';
-import { RegisterComponent } from './components/register/register.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { TShirtComponent } from './components/t-shirt/t-shirt.component';
 
@@ -18,12 +17,11 @@ const routes: Routes = [
   {path: 'GioiThieu' , component: IntroduceComponent},
   {path: 'SanPham' , component: ProductComponent},
   {path: 'DangNhap' , component: LoginComponent},
-  {path: 'DangKy' , component: RegisterComponent},
   {path: 'GioHang' , component: ShoppingCartComponent},
-  {path: 'GioHang' , component: RegisterComponent},
   {path: 'T-shirt' , component: TShirtComponent},
   {path: 'Jacket' , component: JacketComponent},
-  {path: 'Dress' , component: DressComponent}
+  {path: 'Dress' , component: DressComponent},
+  {path: 'Checkout' , component: CheckoutComponent}
 
 
   
