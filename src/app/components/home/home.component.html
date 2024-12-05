@@ -82,17 +82,17 @@
         </div>
       </div>
     </div> <br>
-
     <!-- Item -->
     <!-- <div class="container" style="display: flex; justify-content: space-around; margin-bottom: 2rem;">
       <div class="row" *ngFor="let product of products">
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-4" style="width: auto;">
           <div class="card">
-            <a class="link_details">
+            <a class="link_details" href="product.href">
               <img [src]="product.image" class="card-img-top" alt="">
               <div class="card-body">
                 <h5 class="card-title">{{ product.name | uppercase }}</h5>
                 <p class="card-text_price card-text">Giá: {{ product.price | currency:'VND' }}</p>
+
               </div>
             </a>
             <div style="color: #FEC9C3;">
@@ -120,9 +120,9 @@
 
     <div class="container" style="display: flex; justify-content: space-around; margin-bottom: 2rem;flex-wrap: wrap;">
       <div class="row" *ngFor="let product of products">
-        <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-4" style="width: fit-content; height: fit-content;" >
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-4" style="width: fit-content; height: fit-content;">
           <div class="card">
-            <a class="link_details">
+            <a class="link_details" href="{{product.href}}">
               <img src="{{ product.image }}" class="card-img-top" alt="">
               <div class="card-body">
                 <h5 class="card-title">{{product.name | upperCasePipe}} </h5>
@@ -139,12 +139,12 @@
             </div>
             <div class="d-grid gap-2 col-6 mx-auto" style="width: 100%;">
               <button id="SP-10" data-name="Vali Larita Cetus HF8022" data-price="2250000"
-                class=" add-to-cart cart_details-btn btn" type="button" id="liveToastBtn" (click)="addToCart(product)">Thêm vào giỏ hàng</button>
+                class=" add-to-cart cart_details-btn btn" type="button" id="liveToastBtn"
+                (click)="addToCart(product)">Thêm vào giỏ hàng</button>
             </div>
           </div>
         </div>
-
-    <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-4">
+        <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-4">
           <div class="card">
             <a class="link_details" href="#">
               <img src="assets/Local/jacket1.webp" class="card-img-top" alt="">
@@ -182,6 +182,22 @@
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-half"></i>
+
+            <div class="card">
+              <a class="link_details" href="Detail3">
+                <img src="assets/Local/sweater2.webp" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Diamond Monogram </h5>
+                  <p class="card-text_price card-text"> Giá: 4.490.000₫</p>
+                  <div style="color: #FEC9C3;">
+                    <span style="font-size: 20px;">Đánh giá:</span>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+
                 </div>
               </div>
             </a>
@@ -193,6 +209,7 @@
         </div>
 
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-4">
+<<<<<<< HEAD
           <div class="card">
             <a class="link_details" >
               <img src="assets/Local/sweater1.webp" class="card-img-top" alt="">
@@ -215,5 +232,6 @@
             </div>
           </div>
         </div> -->
-  </div>
-</div>
+
+      </div>
+    </div>

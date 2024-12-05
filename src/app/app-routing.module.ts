@@ -10,6 +10,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductComponent } from './components/product/product.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { TShirtComponent } from './components/t-shirt/t-shirt.component';
+import { Detail4Component } from './components/detail/detail4/detail4.component';
+import { Detail3Component } from './components/detail/detail3/detail3.component';
+import { Detail2Component } from './components/detail/detail2/detail2.component';
+import { Detail1Component } from './components/detail/detail1/detail1.component';
 
 const routes: Routes = [
   {path: '', component : HomeComponent},
@@ -21,7 +25,12 @@ const routes: Routes = [
   {path: 'T-shirt' , component: TShirtComponent},
   {path: 'Jacket' , component: JacketComponent},
   {path: 'Dress' , component: DressComponent},
-  {path: 'Checkout' , component: CheckoutComponent}
+  {path: 'Checkout' , component: CheckoutComponent},
+  {path: 'Detail1', component:Detail1Component},
+  {path: 'Detail2', component:Detail2Component},
+  {path: 'Detail3', component:Detail3Component},
+  {path: 'Detail4', component:Detail4Component}
+
 
 
   

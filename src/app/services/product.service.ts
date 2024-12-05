@@ -7,6 +7,7 @@ export interface Product {
   price: number;
   image: string;
   rating: number;
+  href: string;
 }
 
 @Injectable({
@@ -16,31 +17,35 @@ export class ProductService {
   private productsSubject = new BehaviorSubject<Product[]>([
     {
       id: 1,
-      name: ' Chân váy xếp li mini ',
-      price: 3290000,
-      image: 'assets/Local/dress1.webp',
-      rating: 4.5
+      name: ' MLB Womens Denim ',
+      price: 2300000,
+      image: 'assets/Local/dress8.webp',
+      rating: 4.5,
+      href: 'Detail1'
     },
     {
         id: 2,
-        name: 'Rib Cardigan Grey ',
-        price: 500000,
-        image: 'assets/Local/jacket1.webp',
-        rating: 4.5
+        name: 'Váy mini xếp tầng ',
+        price: 2000000,
+        image: 'assets/Local/dress4.jpg',
+        rating: 4.5,
+        href: 'Detail2'
       },
       {
         id: 3,
-        name: 'T-shirt Adidas Purple ',
-        price: 1050000,
-        image: 'assets/Local/shirt1.webp',
-        rating: 4.5
+        name: 'Diamond Monogram ',
+        price: 4490000,
+        image: 'assets/Local/sweater2.webp',
+        rating: 4.5,
+        href: 'Detail3'
       },
       {
         id: 4,
-        name: 'DSS SWEATER PINK ',
-        price: 500000,
-        image: 'assets/Local/sweater1.webp',
-        rating: 4.5
+        name: 'T-shirt LA Dodgers ',
+        price: 1750000,
+        image: 'assets/Local/shirt2.webp',
+        rating: 4.5,
+        href: 'Detail4'
       }
   ]);
 

@@ -19,6 +19,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CurrencyPipe } from "./components/pipes/CurrencyPipe.pipe";
 import { NgIf } from '@angular/common';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { Detail1Component } from './components/detail/detail1/detail1.component';
+import { Detail2Component } from './components/detail/detail2/detail2.component';
+import { Detail3Component } from './components/detail/detail3/detail3.component';
+import { Detail4Component } from './components/detail/detail4/detail4.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [
@@ -32,7 +37,12 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
         JacketComponent,
         DressComponent,
         LoginComponent,
-        CheckoutComponent
+        CheckoutComponent,
+        Detail1Component,
+        Detail2Component,
+        Detail3Component,
+        Detail4Component,
+
     ],
     providers: [
         provideClientHydration(),
@@ -45,7 +55,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
         HomeComponent,
         FormsModule,
         HttpClientModule,
-        CurrencyPipe
+        CurrencyPipe,
+        MatSnackBarModule,
 
     ]
 })
