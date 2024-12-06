@@ -16,6 +16,7 @@ import { Detail3Component } from './components/detail/detail3/detail3.component'
 import { Detail2Component } from './components/detail/detail2/detail2.component';
 import { Detail1Component } from './components/detail/detail1/detail1.component';
 
+
 const routes: Routes = [
   {path: '', component : HomeComponent},
   {path: 'TrangChu' , component: HomeComponent},
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path: 'Detail2', component:Detail2Component},
   {path: 'Detail3', component:Detail3Component},
   {path: 'Detail4', component:Detail4Component}
+ 
 
 
   

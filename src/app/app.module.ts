@@ -20,6 +20,7 @@ import { Detail2Component } from './components/detail/detail2/detail2.component'
 import { Detail3Component } from './components/detail/detail3/detail3.component';
 import { Detail4Component } from './components/detail/detail4/detail4.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { Detail4Component } from './components/detail/detail4/detail4.component'
     Detail2Component,
     Detail3Component,
     Detail4Component
+
    
   ],
   imports: [
