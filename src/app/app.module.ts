@@ -20,6 +20,7 @@ import { Detail2Component } from './components/detail/detail2/detail2.component'
 import { Detail3Component } from './components/detail/detail3/detail3.component';
 import { Detail4Component } from './components/detail/detail4/detail4.component';
 
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { Detail4Component } from './components/detail/detail4/detail4.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule
   ],
   providers: [
     provideClientHydration(),
