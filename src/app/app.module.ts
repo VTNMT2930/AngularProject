@@ -24,6 +24,8 @@ import { Detail2Component } from './components/detail/detail2/detail2.component'
 import { Detail3Component } from './components/detail/detail3/detail3.component';
 import { Detail4Component } from './components/detail/detail4/detail4.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { upperCasePipe } from "./components/pipes/Uppercase.pipe";
+
 
 @NgModule({
     declarations: [
@@ -50,14 +52,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ],
     bootstrap: [AppComponent],
     imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HomeComponent,
-        FormsModule,
-        HttpClientModule,
-        CurrencyPipe,
-        MatSnackBarModule,
-
-    ]
+    BrowserModule,
+    AppRoutingModule,
+    HomeComponent,
+    FormsModule,
+    HttpClientModule,
+    CurrencyPipe,
+    MatSnackBarModule,
+    upperCasePipe
+]
 })
 export class AppModule { }

@@ -7,14 +7,7 @@ img {
     display: inline-flex;
     align-items: center;
 }
-/* .quantity input[type="button"] {
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    border: 1px solid #ccc;
-    background-color: #f0f0f0;
-    cursor: pointer;
-} */
+
 .quantity input.qty {
     width: 55px;
     height: 35px;

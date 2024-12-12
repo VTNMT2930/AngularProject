@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { CartService } from '../../services/cart.service';
+import { NotificationService } from '../../services/notification.service';
 import { Product, ProductService } from '../../services/product.service';
 import { CurrencyPipe } from '../pipes/CurrencyPipe.pipe';
 import { upperCasePipe } from '../pipes/Uppercase.pipe';
@@ -27,7 +28,8 @@ export class HomeComponent {
 
   constructor(
     private productService: ProductService,
-    private cartService: CartService
+    private cartService: CartService,
+    private notificationService: NotificationService
   ) {}
 
   ngOnInit() {
@@ -36,6 +38,7 @@ export class HomeComponent {
 
   addToCart(product: Product) {
     this.cartService.addToCart({...product, quantity: 1});
+    this.notificationService.showSuccess("Thêm vào giỏ hàng thành công!")
   }
 
   getStars(rating: number): number[] {
