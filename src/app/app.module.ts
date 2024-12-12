@@ -25,6 +25,7 @@ import { Detail3Component } from './components/detail/detail3/detail3.component'
 import { Detail4Component } from './components/detail/detail4/detail4.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+
 @NgModule({
     declarations: [
         AppComponent,
