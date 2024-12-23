@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css'] // Corrected this line from `styleUrl`
 })
 
+
 export class ProductComponent implements OnInit {
   products = [
     { name:'Chân váy xếp li mini',price: 3290000,image: 'assets/Local/dress1.webp'},
@@ -37,6 +38,7 @@ export class ProductComponent implements OnInit {
   ];
 
   p: number = 1; // Current page number
+collection: any;
 
   ngOnInit(): void {}
 
@@ -45,3 +47,5 @@ export class ProductComponent implements OnInit {
     console.log('Product added to cart:', product);
   }
 }
+
+

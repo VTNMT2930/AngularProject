@@ -69,5 +69,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NgxPaginationModule
 ]
 
+
+
 })
 export class AppModule { }
