@@ -24,8 +24,6 @@ import { Detail2Component } from './components/detail/detail2/detail2.component'
 import { Detail3Component } from './components/detail/detail3/detail3.component';
 import { Detail4Component } from './components/detail/detail4/detail4.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { AuthService } from './services/auth.service';
-import { NotificationService } from './services/notification.service';
 
 
 @NgModule({
@@ -52,16 +50,7 @@ import { NotificationService } from './services/notification.service';
         provideAnimationsAsync(),
     ],
     bootstrap: [AppComponent],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HomeComponent,
-        FormsModule,
-        HttpClientModule,
-        CurrencyPipe,
-        MatSnackBarModule,
-        NgIf,
+    imports: []
 
-    ]
 })
 export class AppModule { }
