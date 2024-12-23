@@ -25,6 +25,12 @@ import { Detail3Component } from './components/detail/detail3/detail3.component'
 import { Detail4Component } from './components/detail/detail4/detail4.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+import { AuthService } from './services/auth.service';
+import { NotificationService } from './services/notification.service';
+import { upperCasePipe } from "./components/pipes/Uppercase.pipe";
+import { NgxPaginationModule } from 'ngx-pagination';
+
+
 
 @NgModule({
     declarations: [
@@ -50,7 +56,18 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
         provideAnimationsAsync(),
     ],
     bootstrap: [AppComponent],
-    imports: []
+    imports: [
+
+    BrowserModule,
+    AppRoutingModule,
+    HomeComponent,
+    FormsModule,
+    HttpClientModule,
+    CurrencyPipe,
+    MatSnackBarModule,
+    upperCasePipe,
+    NgxPaginationModule
+]
 
 })
 export class AppModule { }
