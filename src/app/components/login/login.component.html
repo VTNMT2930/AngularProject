@@ -46,7 +46,7 @@
 	</div>
 </div> -->
 
-<div class="container" [class.right-panel-active]="isSignUpActive" id="container" style="margin-top: 50px; margin-bottom:50px">
+<!-- <div class="container" [class.right-panel-active]="isSignUpActive" id="container" style="margin-top: 160px; margin-bottom:160px">
 	<div class="form-container sign-up-container">
 		<form (ngSubmit)="onSignUp()" #signUpForm="ngForm">
 			<h1>Create Account</h1>
@@ -92,4 +92,82 @@
 			</div>
 		</div>
 	</div>
+</div> -->
+<div class="container" [class.right-panel-active]="isSignUpActive" id="container" style="margin-top: 160px; margin-bottom:160px">
+    <div class="form-container sign-up-container">
+        <form (ngSubmit)="onSignUp()" #signUpForm="ngForm">
+            <h1>Tạo Tài Khoản</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>hoặc sử dụng email để đăng ký</span>
+            <input type="text" placeholder="Tên đăng nhập" 
+                   [(ngModel)]="signUpUser.username" 
+                   name="username" 
+                   required 
+                   #username="ngModel"/>
+            <input type="email" placeholder="Email" 
+                   [(ngModel)]="signUpUser.email" 
+                   name="email" 
+                   required 
+                   email 
+                   #email="ngModel"/>
+            <input type="password" placeholder="Mật khẩu" 
+                   [(ngModel)]="signUpUser.password" 
+                   name="password" 
+                   required 
+                   minlength="6"
+                   #password="ngModel"/>
+            <button type="submit" (click)="onSignUp()" style="margin-bottom: 10px;">Đăng Ký</button>
+        </form>
+    </div>
+    
+    <div class="form-container sign-in-container">
+        <form (ngSubmit)="onSignIn()" #signInForm="ngForm">
+            <h1>Đăng Nhập</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>hoặc sử dụng tài khoản của bạn</span>
+            <input type="text" placeholder="Tên đăng nhập" 
+                   [(ngModel)]="signInUser.username" 
+                   name="username" 
+                   required 
+                   #signInUsername="ngModel"/>
+            <div *ngIf="signInUsername.invalid && (signInUsername.dirty || signInUsername.touched)" class="text-danger">
+                Tên đăng nhập không được để trống
+            </div>
+            
+            <input type="password" placeholder="Mật khẩu" 
+                   [(ngModel)]="signInUser.password" 
+                   name="password" 
+                   required 
+                   #signInPassword="ngModel"/>
+            <div *ngIf="signInPassword.invalid && (signInPassword.dirty || signInPassword.touched)" class="text-danger">
+                Mật khẩu không được để trống
+            </div>
+            
+            <a href="#">Quên mật khẩu?</a>
+            <button type="submit" [disabled]="!signInForm.form.valid" style="margin-bottom: 10px;">Đăng Nhập</button>
+        </form>
+    </div>
+    
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Chào mừng trở lại!</h1>
+                <p>Để giữ kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
+                <button class="ghost" id="signIn" (click)="togglePanel(false)">Đăng Nhập</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Xin chào, Bạn!</h1>
+                <p>Nhập thông tin cá nhân của bạn và bắt đầu hành trình với chúng tôi</p>
+                <button class="ghost" id="signUp" (click)="togglePanel(true)">Đăng Ký</button>
+            </div>
+        </div>
+    </div>
 </div>

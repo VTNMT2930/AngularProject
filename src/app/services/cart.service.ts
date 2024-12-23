@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
+import { AuthService } from './auth.service';
+import { NotificationService } from './notification.service';
 
 interface CartItem {
   id: number;
@@ -15,7 +18,7 @@ interface CartItem {
 export class CartService {
   private cartItems = new BehaviorSubject<CartItem[]>([]);
   currentCartItems = this.cartItems.asObservable();
-
+  constructor(private authService: AuthService, private notificationService: NotificationService, private router: Router) {}
   addToCart(product: CartItem) {
     const current = this.cartItems.value;
     const existingItem = current.find(item => item.id === product.id);
@@ -53,5 +56,9 @@ export class CartService {
       item.quantity = quantity;
       this.cartItems.next([...current]);
     }
+  }
+  clearCart() {
+    // Đặt giá trị cartItems về mảng rỗng
+    this.cartItems.next([]);
   }
 }

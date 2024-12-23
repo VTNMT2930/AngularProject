@@ -17,13 +17,15 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CurrencyPipe } from "./components/pipes/CurrencyPipe.pipe";
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { Detail1Component } from './components/detail/detail1/detail1.component';
 import { Detail2Component } from './components/detail/detail2/detail2.component';
 import { Detail3Component } from './components/detail/detail3/detail3.component';
 import { Detail4Component } from './components/detail/detail4/detail4.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AuthService } from './services/auth.service';
+import { NotificationService } from './services/notification.service';
 
 
 @NgModule({
@@ -47,7 +49,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ],
     providers: [
         provideClientHydration(),
-        provideAnimationsAsync()
+        provideAnimationsAsync(),
     ],
     bootstrap: [AppComponent],
     imports: [
@@ -58,6 +60,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
         HttpClientModule,
         CurrencyPipe,
         MatSnackBarModule,
+        NgIf,
 
     ]
 })

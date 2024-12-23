@@ -1,7 +1,8 @@
 import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 import { CartService } from '../../services/cart.service';
 import { NotificationService } from '../../services/notification.service';
 import { Product, ProductService } from '../../services/product.service';
@@ -29,7 +30,9 @@ export class HomeComponent {
   constructor(
     private productService: ProductService,
     private cartService: CartService,
-    private notificationService: NotificationService
+    private notificationService: NotificationService,
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -37,8 +40,15 @@ export class HomeComponent {
   }
 
   addToCart(product: Product) {
-    this.cartService.addToCart({...product, quantity: 1});
-    this.notificationService.showSuccess("Thêm vào giỏ hàng thành công!")
+    if (this.authService.isLoggedIn()) {
+      this.cartService.addToCart({...product, quantity: 1});
+      this.notificationService.showSuccess("Thêm vào giỏ hàng thành công!")
+    }
+    else {
+      this.notificationService.showError('Vui lòng đăng nhập để thêm vào giỏ hàng');
+      this.router.navigate(['/DangNhap']);
+    }
+    
   }
 
   getStars(rating: number): number[] {

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from '../../../models/product.model';
 import { CartService } from '../../../services/cart.service';
+import { NotificationService } from '../../../services/notification.service';
 
 @Component({
   selector: 'app-detail1',
@@ -18,9 +19,11 @@ export class Detail1Component {
 
   quantity: number = 1;
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService,
+    private notificationService: NotificationService) {}
 
   addToCart() {
     this.cartService.addToCart({...this.product, quantity: this.quantity });
+    this.notificationService.showSuccess("Thêm vào giỏ hàng thành công!")
   }
 }
